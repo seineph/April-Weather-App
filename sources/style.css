@@ -1,5 +1,7 @@
-.bigCard{width: 800px;
-    height: 400px;
+.bigCard{display: flex;
+margin: 0 auto;
+    width: 800px;
+    height: 800px;
     flex-shrink: 0;
 border-radius: 27px;
     border: 1px solid rgba(134, 213, 247, 0.30);
