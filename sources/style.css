@@ -6,7 +6,9 @@ border-radius: 27px;
     background: linear-gradient(180deg, rgba(87, 142, 226, 0.89) 0%, rgba(192, 221, 237, 0.20) 100%);
     backdrop-filter: blur(27px);}
 
-    .weatherCard{width: 558px;
+    .weatherCard{display: flex;
+    margin: 0 auto;
+        width: 558px;
         height: 282px;
         flex-shrink: 0;
     border-radius: 27px;
