@@ -1,3 +1,9 @@
 .bigCard{width: 1447px;
     height: 781px;
-    flex-shrink: 0;}
+    flex-shrink: 0;
+border-radius: 27px;
+    border: 1px solid rgba(134, 213, 247, 0.30);
+
+    background: linear-gradient(180deg, rgba(87, 142, 226, 0.89) 0%, rgba(192, 221, 237, 0.20) 100%);
+
+    backdrop-filter: blur(27px);}
