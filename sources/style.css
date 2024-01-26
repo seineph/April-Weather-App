@@ -6,7 +6,7 @@ color: #727FFF;}
     height: 30%;
     border-radius: 27px;
     border: 1px solid rgb(223 245 255);
-    background: linear-gradient(180deg, rgba(87, 142, 226, 0.89) 0%, rgba(236, 241, 243, 0.255) 100%);
+    background: linear-gradient(180deg,#D2D6FF 0%, rgba(236, 241, 243, 0.255) 100%);
     backdrop-filter: blur(27px);
     color: #131C4B;
     font-family: "JetBrains Mono";
