@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>April Weather App</title>
-    <script src="sources/script.js"></script>
+
+    <link rel="stylesheet" href="sources/style.css">
 
 
 </head>
@@ -14,15 +15,15 @@
     <h1 class="title">Welcome!</h1>
     <main>
         <header>
-            <form>
-                <input type="search" placeholder="Enter a city.." required class="searchInput" />
-                <input type="submit" value="Search" class="searchButton" />
+            <form id="search-form">
+                <input type="search" placeholder="Enter a city.." required class="searchInput" id="search-input" />
+                <input type="submit" value="Search" class="searchButton" id="search-button" />
             </form>
         </header>
         <div class="weatherText">
 
             <div>
-                <h1 class="cityName">Paris</h1>
+                <h1 class="cityName" id="city-name">Paris</h1>
                 <p>
                     Tuesday 14:49, scattered clouds
                     <br />
@@ -45,8 +46,8 @@
                 href="https://github.com/seineph/April-Weather-App">
                 GitHub</a> hosted by <a href="https://april-weatherapp.netlify.app/">Netlify</a>
         </footer>
-        <link rel="stylesheet" href="sources/style.css">
 
+        <script src="sources/script.js"></script>
     </body>
 
 </html>
