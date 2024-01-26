@@ -1,20 +1,21 @@
-  .title{text-align: center;
+.title{text-align: center;
 color: #727FFF;}
+
   main{margin: 0 auto;
-    width: 60%;
+    width: 640px;
     height: 30%;
     border-radius: 27px;
     border: 1px solid rgb(223 245 255);
     background: linear-gradient(180deg, rgba(87, 142, 226, 0.89) 0%, rgba(236, 241, 243, 0.255) 100%);
     backdrop-filter: blur(27px);
-color: #131C4B;
+    color: #131C4B;
     font-family: "JetBrains Mono";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;}
 
-form{margin: 42px;
+form {margin: 42px;
     display: flex;
     gap: 22px;
     flex-wrap: wrap;
@@ -26,7 +27,7 @@ form{margin: 42px;
 
 .degree {font-size: 36px;}
 
- .weatherText{display: grid;
+.weatherText{display: grid;
     grid-template-columns: 322px 210px;
     justify-items: center;
     align-items: baseline;}
