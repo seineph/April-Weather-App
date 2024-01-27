@@ -15,6 +15,9 @@ function callWeather(response) {
   let fullDate = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date-info");
   dateElement.innerHTML = formatDate(fullDate);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon">`;
 }
 
 function formatDate(fullDate) {
