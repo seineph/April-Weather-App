@@ -9,6 +9,7 @@ background-blend-mode:soft-light }
 color: #0010a0;}
 
 .smallerText{font-size: 14px;}
+.detailText {margin-right: 0;}
 
   main{margin: 0 auto;
     width: 560px;

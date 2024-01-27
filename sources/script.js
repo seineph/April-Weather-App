@@ -6,6 +6,17 @@ function callWeather(response) {
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+
+  let date = new Date(response.data.time * 1000);
+  console.log(date);
+
+  console.log(response.data.time);
 }
 
 function searchCity(city) {
