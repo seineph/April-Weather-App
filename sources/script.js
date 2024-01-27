@@ -13,10 +13,12 @@ function callWeather(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
-  let date = new Date(response.data.time * 1000);
-  console.log(date);
+  let fullDate = new Date(response.data.time * 1000);
+  let date = fullDate.getDate();
+  let day = fullDate.getDay();
+  let hours = fullDate.getHours();
 
-  console.log(response.data.time);
+  console.log(day);
 }
 
 function searchCity(city) {
