@@ -32,7 +32,10 @@ function formatDate(fullDate) {
   ];
   let day = dayNames[fullDate.getDay()];
   return `${day} ${hours}:${minutes}`;
-  console.log(day);
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 }
 
 function searchCity(city) {
