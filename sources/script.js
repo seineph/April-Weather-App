@@ -12,12 +12,26 @@ function callWeather(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
-
   let fullDate = new Date(response.data.time * 1000);
-  let date = fullDate.getDate();
-  let day = fullDate.getDay();
-  let hours = fullDate.getHours();
+  let dateElement = document.querySelector("#date-info");
+  dateElement.innerHTML = formatDate(fullDate);
+}
 
+function formatDate(fullDate) {
+  let date = fullDate.getDate();
+  let minutes = fullDate.getMinutes();
+  let hours = fullDate.getHours();
+  let dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = dayNames[fullDate.getDay()];
+  return `${day} ${hours}:${minutes}`;
   console.log(day);
 }
 
