@@ -5,9 +5,8 @@ background-size: cover;
 background-blend-mode:soft-light; }
 main {
     margin: 0 auto;
-    margin-top: 78px;
     width: 560px;
-    height: 320px;
+    height: 328px;
     border-radius: 27px;
     border: 1px solid rgba(48, 91, 169, 0.23);
     background: linear-gradient(180deg, rgb(12 36 76 / 54%) 11.77%, rgb(42 83 153 / 23%) 37.23%, rgba(68, 113, 191, 0.13) 49.54%, rgb(255 255 255 / 24%) 93.88%);
@@ -24,18 +23,20 @@ main {
   
 }
 
- img{margin: -27px;
+ img{margin-right: 36px;
     display: inline-block;
-
+    display: inline-block;
+        margin-top: -9px;
+        margin-left: -12px;
 }
 
-.title{text-align: center;
+.title{margin-top:46px;text-align: center;
     font-family:url("fonts/ttf/JetBrainsMonoNL-Regular.ttf");
 color: #0010a0;}
 
 .smallerText{font-size: 14px;}
 .detailText {margin-right: 0;}
-.degreeNumber{font-size: 38px;}
+.degreeNumber{font-size: 42px;}
 
 
 
@@ -65,13 +66,10 @@ color: #eef3ff;
         p.detailText{color:#c1d2ee;}
 
 .degree {
-display: flex;
-    align-items: center;
-    flex-direction: row;
- 
-gap: 16px;
-color: #fff;
-
+        display: flex;
+            flex-direction: row-reverse;
+            margin: -9px 18px;
+            align-items: center;
    }
 
    .degreeNumIcon{display: block;
@@ -79,18 +77,19 @@ color:#c7d5ef;}
 
 
 .weatherText{display: grid;
-grid-template-columns: 304px 178px;
-gap:56px;
-    justify-items: center;
-    align-items: start;
-margin:40px 0;
-padding: 2px;
-color: #ffffff;
+    grid-template-columns: 356px 170px;
+    gap: 22px;
+    margin: 40px 0;
+    padding: 6px;
+    color: #ffffff;
     font-family: "JetBrains Mono";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height:20px}
+    line-height: 20px;
+    align-items: start;
+    justify-content: space-between;
+    justify-items: start;}
     
 .searchInput {
         display: flex;
@@ -124,5 +123,6 @@ color: #ffffff;
 
 }
     footer{
+        margin: 32px 0;
         padding: 10px;
         text-align: center;}
