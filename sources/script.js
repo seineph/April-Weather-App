@@ -8,10 +8,10 @@ function callWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   let fullDate = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date-info");
   dateElement.innerHTML = formatDate(fullDate);
@@ -33,12 +33,12 @@ function formatDate(fullDate) {
     "Friday",
     "Saturday",
   ];
-  let day = dayNames[fullDate.getDay()];
-  return `${day} ${hours}:${minutes}`;
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let day = dayNames[fullDate.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
