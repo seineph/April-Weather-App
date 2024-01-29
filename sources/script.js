@@ -54,6 +54,28 @@ function searchSubmit(event) {
   searchCity(searchInputElement.value);
 }
 
+function displayForecast(params) {
+  let forecastHtml = "";
+  let days = [`Wed`, `Thur`, `Fri`, `Sat`, `Sun`];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weatherForecast">
+        
+            <strong class="forecastDayName">
+                Tue
+            </strong>
+            <div class=forecastDegreeGroup> <strong class="forecastDegree"> 18°</strong>12°
+            </div>
+            <span class="forecastIcon">⛅️ </span>
+        </div>
+    `;
+  });
+  let forecastElement = document.querySelector("#forecast-box");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
 searchCity("Reykjavik");
+displayForecast();
