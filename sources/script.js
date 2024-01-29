@@ -14,6 +14,7 @@ function callWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   let fullDate = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date-info");
+
   dateElement.innerHTML = formatDate(fullDate);
 
   let iconElement = document.querySelector("#icon");
@@ -56,6 +57,12 @@ function searchSubmit(event) {
   searchCity(searchInputElement.value);
 }
 
+function formatForecastDay(timestamp) {
+  let day = new Date(timestamp * 1000);
+  let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return dayNames[day.getDay()];
+}
+
 function getForecast(city) {
   apiKey = "8daacfbefa5ad84o0e990686f432t73c";
   apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -67,20 +74,24 @@ function displayForecast(response) {
   console.log(response.data.daily);
 
   let forecastHtml = "";
-  let days = [`Wed`, `Thur`, `Fri`, `Sat`, `Sun`];
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weatherForecast">
-        
-            <strong class="forecastDayName">
-                Tue
-            </strong>
-            <div class=forecastDegreeGroup> <strong class="forecastDegree"> 18°</strong>12°
-            </div>
-            <span class="forecastIcon">⛅️ </span>
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weatherForecast">
+      
+      <strong class="forecastDayName">
+      ${formatForecastDay(day.time)}
+      </strong>
+      <div class=forecastDegreeGroup> <strong class="forecastDegree">${Math.round(
+        day.temperature.maximum
+      )}°</strong>${Math.round(day.temperature.minimum)}°
         </div>
-    `;
+        <span class="forecastIcon"><img src="${day.condition.icon_url}"/></span>
+        </div>
+        `;
+    }
   });
   let forecastElement = document.querySelector("#forecast-box");
   forecastElement.innerHTML = forecastHtml;
