@@ -12,9 +12,9 @@ function callWeather(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  let fullDate = new Date(response.data.time * 1000);
-  let dateElement = document.querySelector("#date-info");
 
+  let dateElement = document.querySelector("#date-info");
+  let fullDate = new Date(response.data.time * 1000);
   dateElement.innerHTML = formatDate(fullDate);
 
   let iconElement = document.querySelector("#icon");
@@ -71,8 +71,6 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
-
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -80,7 +78,6 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `<div class="weatherForecast">
-      
       <strong class="forecastDayName">
       ${formatForecastDay(day.time)}
       </strong>
@@ -97,6 +94,7 @@ function displayForecast(response) {
   });
   let forecastElement = document.querySelector("#forecast-box");
   forecastElement.innerHTML = forecastHtml;
+  console.log(response.data.daily);
 }
 
 let searchFormElement = document.querySelector("#search-form");
